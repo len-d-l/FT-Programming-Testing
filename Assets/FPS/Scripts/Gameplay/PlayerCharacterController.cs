@@ -474,10 +474,5 @@ namespace Unity.FPS.Gameplay
             IsCrouching = crouched;
             return true;
         }
-
-        public void HandleHookshotStart()
-        {
-
-        }
     }
 }
