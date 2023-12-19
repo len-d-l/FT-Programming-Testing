@@ -28,13 +28,15 @@ namespace Unity.FPS.UI
 
         private void Start()
         {
+            characterController = FindObjectOfType<PlayerCharacterController>();
+
             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
             {
                 enemies.Add(enemy);
             }
         }
 
-        public void Unlock(SkillType skills, float modifierIncrease = 0.0f)
+        public void Unlock(SkillType skills)
         {
             switch (skills)
             {
@@ -51,12 +53,16 @@ namespace Unity.FPS.UI
                     DamageUp(1.5f);
                     break;
                 case SkillType.JumpUp:
+                    JumpUp(2.5f);
                     break;
                 case SkillType.Jetpack:
+                    characterController.GetComponent<Jetpack>().TryUnlock();
                     break;
                 case SkillType.Dash:
+                    characterController.GetComponent<Dash>().enabled = true;
                     break;
                 case SkillType.Grapple:
+                    characterController.GetComponent<Grappling>().enabled = true;
                     break;
                 default:
                     break;

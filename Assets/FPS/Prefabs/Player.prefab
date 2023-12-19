@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 1661717823}
   - component: {fileID: 284873668623284165}
   - component: {fileID: 5477927819854673968}
+  - component: {fileID: 7326137259262280260}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -445,6 +446,7 @@ MonoBehaviour:
   RotationSpeed: 200
   AimingRotationMultiplier: 0.4
   JumpForce: 9
+  DoubleJump: 0
   CameraHeightRatio: 0.8
   CapsuleHeightStanding: 1.8
   CapsuleHeightCrouching: 0.9
@@ -460,6 +462,8 @@ MonoBehaviour:
   MaxSpeedForFallDamage: 40
   FallDamageAtMinSpeed: 10
   FallDamageAtMaxSpeed: 30
+  Freeze: 0
+  ActiveGrapple: 0
 --- !u!114 &1360575517897679518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +813,28 @@ MonoBehaviour:
   DashDistance: 5
   DashStoppingSpeed: 0.1
   DashCooldown: 1
+--- !u!114 &7326137259262280260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253983127304857660}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bb43ae6314bf649abb4a044bb27499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 8694137560673455815}
+  GunTip: {fileID: 0}
+  Grappleable:
+    serializedVersion: 2
+    m_Bits: 1
+  LineRenderer: {fileID: 0}
+  MaxGrappleDistance: 25
+  GrappleDelayTime: 0.25
+  OvershootYAxis: 2
+  GrappleCd: 1
 --- !u!1 &7383874627095517793
 GameObject:
   m_ObjectHideFlags: 0

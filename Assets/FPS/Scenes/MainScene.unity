@@ -3942,6 +3942,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7326137259262280260, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: GunTip
+      value: 
+      objectReference: {fileID: 1723664916}
+    - target: {fileID: 7326137259262280260, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326137259262280260, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: LineRenderer
+      value: 
+      objectReference: {fileID: 1304584384}
     - target: {fileID: 7491190654590824519, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -4065,28 +4080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a263bf0b7f8be4bb96ece0067215e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2729281214152228935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2729281214152228921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bb43ae6314bf649abb4a044bb27499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Camera: {fileID: 2729281214152228923}
-  GunTip: {fileID: 1723664916}
-  Grappleable:
-    serializedVersion: 2
-    m_Bits: 1
-  LineRenderer: {fileID: 1304584384}
-  MaxGrappleDistance: 25
-  GrappleDelayTime: 0.25
-  OvershootYAxis: 2
-  GrappleCd: 1
 --- !u!1001 &2729281214182533258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6380,6 +6373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -6387,7 +6385,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4008933581619590513}
+      objectReference: {fileID: 4008933581619590514}
     - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -6400,13 +6398,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DamageUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Unity.FPS.UI.SkillsManager, fps.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Unity.FPS.UI.SkillTreeButtonManager, fps.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Dash
       objectReference: {fileID: 0}
     - target: {fileID: 7396363526547845378, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
@@ -6438,6 +6451,11 @@ PrefabInstance:
       propertyPath: myButton
       value: 
       objectReference: {fileID: 663949717}
+    - target: {fileID: 7568740039437905641, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7568740039437905641, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: levelSystem
@@ -6757,9 +6775,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 4008933581619590512}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa4f3df62fd87f439dbded04664af3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4008933581619590514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4382662962717323183, guid: c996b53e9f849234393d1e90f68d1679,
+    type: 3}
+  m_PrefabInstance: {fileID: 4008933581619590512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94852a0a68d1ae841a3822b9efaf4a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &9217268748774167426

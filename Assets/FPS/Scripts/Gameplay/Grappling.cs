@@ -9,7 +9,7 @@ namespace Unity.FPS.Gameplay
     public class Grappling : MonoBehaviour
     {
         [Header("References")]
-        private PlayerCharacterController p_Controller;
+        private PlayerCharacterController characterController;
         public Transform Camera;
         public Transform GunTip;
         public LayerMask Grappleable;
@@ -31,7 +31,7 @@ namespace Unity.FPS.Gameplay
 
         private void Start()
         {
-            p_Controller = GetComponent<PlayerCharacterController>();
+            characterController = GetComponent<PlayerCharacterController>();
         }
 
         private void Update()
@@ -61,7 +61,7 @@ namespace Unity.FPS.Gameplay
 
             grappling = true;
 
-            p_Controller.Freeze = true;
+            characterController.Freeze = true;
 
             RaycastHit raycastHit;
             if (Physics.Raycast(Camera.position, Camera.forward, out raycastHit, MaxGrappleDistance, Grappleable))
@@ -84,7 +84,7 @@ namespace Unity.FPS.Gameplay
 
         private void ExecuteGrapple()
         {
-            p_Controller.Freeze = false;
+            characterController.Freeze = false;
 
             Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
 
@@ -96,14 +96,14 @@ namespace Unity.FPS.Gameplay
                 highestPointOnArc = OvershootYAxis;
             }
 
-            p_Controller.JumpToPosition(grapplePoint, highestPointOnArc);
+            characterController.JumpToPosition(grapplePoint, highestPointOnArc);
 
             Invoke(nameof(StopGrapple), 1f);
         }
 
         private void StopGrapple()
         {
-            p_Controller.Freeze = false;
+            characterController.Freeze = false;
 
             grappling = false;
 

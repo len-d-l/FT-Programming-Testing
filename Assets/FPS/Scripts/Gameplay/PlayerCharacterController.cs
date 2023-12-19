@@ -483,6 +483,7 @@ namespace Unity.FPS.Gameplay
             return true;
         }
 
+        // Calculate direction of movement when grappling
         public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
         {
             float gravity = Physics.gravity.y;
@@ -496,18 +497,25 @@ namespace Unity.FPS.Gameplay
             return velocityXZ + velocityY;
         }
 
+        // Grapple towards destination
         public void JumpToPosition(Vector3 targerPosition, float trajectoryHeight)
         {
             ActiveGrapple = true;
 
-            velolcityToSet = CalculateJumpVelocity(transform.position, targerPosition, trajectoryHeight);
+            velocityToSet = CalculateJumpVelocity(transform.position, targerPosition, trajectoryHeight);
             Invoke(nameof(SetVelocity), 0.1f);
         }
 
-        private Vector3 velolcityToSet;
+        private Vector3 velocityToSet;
         private void SetVelocity()
         {
-            CharacterVelocity = velolcityToSet;
+            // Grapple while on the ground
+            if (IsGrounded)
+            {
+                m_LastTimeJumped = Time.time;
+            }
+
+            CharacterVelocity = velocityToSet;
         }
     }
 }
