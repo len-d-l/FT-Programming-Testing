@@ -105,6 +105,9 @@ namespace Unity.FPS.Gameplay
         public bool IsDead { get; private set; }
         public bool IsCrouching { get; private set; }
 
+        public bool Freeze;
+        public bool ActiveGrapple;
+
         public float RotationMultiplier
         {
             get
@@ -215,6 +218,11 @@ namespace Unity.FPS.Gameplay
             UpdateCharacterHeight(false);
 
             HandleCharacterMovement();
+
+            if (Freeze)
+            {
+                CharacterVelocity = Vector3.zero;
+            }
         }
 
         void OnDie()
@@ -473,6 +481,33 @@ namespace Unity.FPS.Gameplay
 
             IsCrouching = crouched;
             return true;
+        }
+
+        public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
+        {
+            float gravity = Physics.gravity.y;
+            float displacementY = endPoint.y - startPoint.y;
+            Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
+
+            Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * trajectoryHeight);
+            Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity)
+                + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
+
+            return velocityXZ + velocityY;
+        }
+
+        public void JumpToPosition(Vector3 targerPosition, float trajectoryHeight)
+        {
+            ActiveGrapple = true;
+
+            velolcityToSet = CalculateJumpVelocity(transform.position, targerPosition, trajectoryHeight);
+            Invoke(nameof(SetVelocity), 0.1f);
+        }
+
+        private Vector3 velolcityToSet;
+        private void SetVelocity()
+        {
+            CharacterVelocity = velolcityToSet;
         }
     }
 }

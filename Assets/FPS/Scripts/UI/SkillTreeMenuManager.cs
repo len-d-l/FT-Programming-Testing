@@ -50,7 +50,7 @@ namespace Unity.FPS.UI
                 }
             }
 
-            SkillPointText.text = "Skill Points: " + characterController.GetComponent<LevelSystem>().SkillPoints;
+            SkillPointText.text = $"Skill Points: {characterController.GetComponent<LevelSystem>().SkillPoints}";
 
             bool anyMenuActive = SkillTreeMenuRoot.activeSelf || PauseMenuRoot.activeSelf;
             Cursor.lockState = anyMenuActive ? CursorLockMode.None : CursorLockMode.Locked;

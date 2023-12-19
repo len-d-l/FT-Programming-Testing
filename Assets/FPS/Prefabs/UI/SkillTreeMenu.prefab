@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 3441867730460628276}
   - component: {fileID: 6782434647471469075}
   - component: {fileID: 5802190906100424927}
+  - component: {fileID: 386832013860020633}
   m_Layer: 5
   m_Name: SkillTree
   m_TagString: Untagged
@@ -867,6 +868,18 @@ MonoBehaviour:
   jetpack: {fileID: 0}
   characterController: {fileID: 0}
   damageable: []
+--- !u!114 &386832013860020633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667823176485975782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94852a0a68d1ae841a3822b9efaf4a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5695568354020753728
 GameObject:
   m_ObjectHideFlags: 0

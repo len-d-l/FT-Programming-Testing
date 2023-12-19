@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 1614318205656627459}
   m_Layer: 0
   m_Name: Enemy_HoverBot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1516,7 +1516,7 @@ PrefabInstance:
     - target: {fileID: 8855434715677272939, guid: 1bc9e4f49c67a6a41af3e7cb3d30bb43,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8855434715677272939, guid: 1bc9e4f49c67a6a41af3e7cb3d30bb43,
         type: 3}
