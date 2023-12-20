@@ -29,8 +29,8 @@ namespace Unity.FPS.UI
         
         private void Start()
         {
-            SkillLevels = new int[6];
-            SkillCaps = new[] { 2, 2, 1, 1, 1, 1, };
+            SkillLevels = new[] { 0, 0, 0, 0, 0, 0 };
+            SkillCaps = new[] { 2, 2, 1, 1, 1, 1 };
 
             SkillNames = new[] { "Health Up", "Damage Up", "Dash", "Grapple", "Jump Up", "Jetpack", };
             SkillDescription = new[]
@@ -40,7 +40,7 @@ namespace Unity.FPS.UI
                 "Gain ability to dash (Q)",
                 "Unlock grappling hook (E)",
                 "Increase jump height",
-                "Unlock jetpack (Space)",
+                "Unlock jetpack (Space)"
             };
 
             foreach (var skill in SkillHolder.GetComponentsInChildren<SkillManager>())
@@ -51,10 +51,9 @@ namespace Unity.FPS.UI
             foreach (var connector in ConnectorHolder.GetComponentsInChildren<RectTransform>())
             {
                 ConnectorList.Add(connector.gameObject);
-                Debug.Log(connector.gameObject.name);
             }
 
-            for (var i = 0; i < SkillList.Count - 1; i++)
+            for (var i = 0; i < SkillList.Count; i++)
             {
                 SkillList[i].SkillId = i;
             }
