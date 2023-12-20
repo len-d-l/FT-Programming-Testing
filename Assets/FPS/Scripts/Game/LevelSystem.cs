@@ -30,8 +30,6 @@ namespace Unity.FPS.Game
         [Range(7f, 14f)]
         public float DivisionMultiplier = 7;
 
-
-        // Start is called before the first frame update
         void Start()
         {
             ExpBar.fillAmount = CurrentExp / RequiredExp;

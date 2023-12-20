@@ -26,13 +26,13 @@ namespace Unity.FPS.UI
 
         public List<GameObject> ConnectorList;
         public GameObject ConnectorHolder;
-
+        
         private void Start()
         {
             SkillLevels = new int[6];
-            SkillCaps = new[] {2, 2, 1, 1, 1, 1,};
+            SkillCaps = new[] { 2, 2, 1, 1, 1, 1, };
 
-            SkillNames = new[] {"Health Up", "Damage Up", "Dash", "Grapple", "Jump Up", "Jetpack",};
+            SkillNames = new[] { "Health Up", "Damage Up", "Dash", "Grapple", "Jump Up", "Jetpack", };
             SkillDescription = new[]
             {
                 "Increase amount of health",
@@ -51,9 +51,10 @@ namespace Unity.FPS.UI
             foreach (var connector in ConnectorHolder.GetComponentsInChildren<RectTransform>())
             {
                 ConnectorList.Add(connector.gameObject);
+                Debug.Log(connector.gameObject.name);
             }
 
-            for (var i = 0; i < SkillList.Count; i++)
+            for (var i = 0; i < SkillList.Count - 1; i++)
             {
                 SkillList[i].SkillId = i;
             }

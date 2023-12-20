@@ -234,6 +234,8 @@ MonoBehaviour:
   TitleText: {fileID: 5308497327774122277}
   DescriptionText: {fileID: 8688494324389619668}
   ConnectedSkills: 
+  LevelSystem: {fileID: 284873668623284165, guid: 761cdc9e4e883334cbdcea062d0befa7,
+    type: 3}
 --- !u!114 &6236347858787676125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,8 +327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000047207, y: -12.3576}
-  m_SizeDelta: {x: 82.98, y: 24.6795}
+  m_AnchoredPosition: {x: -0.0000086518, y: -12.34}
+  m_SizeDelta: {x: 75.7909, y: 24.6795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1499888280838599846
 CanvasRenderer:

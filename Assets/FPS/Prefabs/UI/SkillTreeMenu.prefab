@@ -731,8 +731,7 @@ GameObject:
   - component: {fileID: 125538477462400192}
   - component: {fileID: 3441867730460628276}
   - component: {fileID: 6782434647471469075}
-  - component: {fileID: 5802190906100424927}
-  - component: {fileID: 386832013860020633}
+  - component: {fileID: 3431504230877245106}
   m_Layer: 5
   m_Name: SkillTree
   m_TagString: Untagged
@@ -803,7 +802,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5802190906100424927
+--- !u!114 &3431504230877245106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -812,27 +811,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5667823176485975782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa4f3df62fd87f439dbded04664af3f, type: 3}
+  m_Script: {fileID: 11500000, guid: bdd2bf9f5afafd443a4f28c5161a8d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnePointButtons: []
-  TwoPointButtons: []
-  myButton: {fileID: 0}
-  jetpack: {fileID: 0}
-  characterController: {fileID: 0}
-  damageable: []
---- !u!114 &386832013860020633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5667823176485975782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94852a0a68d1ae841a3822b9efaf4a6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  SkillLevels: 
+  SkillCaps: 
+  SkillNames: []
+  SkillDescription: []
+  SkillList: []
+  SkillHolder: {fileID: 9005126015806358839}
+  ConnectorList: []
+  ConnectorHolder: {fileID: 430673636883785220}
 --- !u!1 &6296771778206574156
 GameObject:
   m_ObjectHideFlags: 0

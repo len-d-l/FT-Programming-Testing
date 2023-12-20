@@ -24,6 +24,8 @@ namespace Unity.FPS.UI
 
         void Update()
         {
+            SkillPointText.text = $"Skill Points: {characterController.GetComponent<LevelSystem>().SkillPoints}";
+
             // Lock cursor when clicking outside of menu
             if (!SkillTreeMenuRoot.activeSelf && Input.GetMouseButtonDown(0))
             {
@@ -49,8 +51,6 @@ namespace Unity.FPS.UI
                     PauseMenuRoot.SetActive(false); // Close the Pause menu if open
                 }
             }
-
-            SkillPointText.text = $"Skill Points: {characterController.GetComponent<LevelSystem>().SkillPoints}";
 
             bool anyMenuActive = SkillTreeMenuRoot.activeSelf || PauseMenuRoot.activeSelf;
             Cursor.lockState = anyMenuActive ? CursorLockMode.None : CursorLockMode.Locked;
