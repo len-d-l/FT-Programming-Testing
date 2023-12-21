@@ -8,8 +8,8 @@ namespace Unity.FPS.Gameplay
 {
     public class Grappling : MonoBehaviour
     {
-        [Header("References")]
         private PlayerCharacterController characterController;
+        [Header("References")]
         public Transform Camera;
         public Transform GunTip;
         public LayerMask Grappleable;

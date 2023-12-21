@@ -9,10 +9,10 @@ namespace Unity.FPS.Gameplay
 {
     public class Dash : MonoBehaviour
     {
-        public Vector3 MoveDirection;
-
-        [Header("Dash")]
+        private Vector3 MoveDirection;
+        
         public const float MaxDashTime = 1.0f;
+        [Header("Dash")]
         public float DashDistance = 5;
         public float DashStoppingSpeed = 0.1f;
         public float DashCooldown = 1.0f;
