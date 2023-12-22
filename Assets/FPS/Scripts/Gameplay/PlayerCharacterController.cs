@@ -105,6 +105,7 @@ namespace Unity.FPS.Gameplay
         public bool IsDead { get; private set; }
         public bool IsCrouching { get; private set; }
 
+        [Header("Grapple")]
         public bool Freeze;
         public bool ActiveGrapple;
 
